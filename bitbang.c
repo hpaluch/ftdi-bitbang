@@ -7,8 +7,9 @@
 #include <ftdi.h>
 
 
+// Vendor and Device IDs for UM232H board (verify with "lsusb") command
 #define BB_UM232H_VID 0x403
-#define BB_UM232H_DID 0x6001
+#define BB_UM232H_DID 0x6014
 
 // mimic linux pr_xx macros
 #define pr_err(fmt, ...) fprintf(stderr,"ERROR: " fmt, ##__VA_ARGS__)
@@ -47,7 +48,7 @@ int main(int argc, char **argv)
 
 	sleep(3); // ugh see base source
 
-	for(i=0;i<4;i++){
+	for(i=0;i<10;i++){
 		buf[0] = (unsigned char)(i & 1);
 		f = ftdi_write_data(ftdi, buf, 1);
 		if (f < 0){
@@ -55,7 +56,7 @@ int main(int argc, char **argv)
 					ftdi_get_error_string(ftdi));
 			goto exit3;
 		}
-		printf("Setting AD0 LED to %d\n",(int)buf[0]);
+		printf("#%02d Setting AD0 LED to %d\n",i+1,(int)buf[0]);
 		sleep(1);
 	}
 

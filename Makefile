@@ -7,8 +7,9 @@ all: bitbang
 
 bitbang : bitbang.c
 
+# requires sudo to have R/W access to /dev/bus/usb/BUS/DEVICE
 run: bitbang
-	./bitbang
+	sudo ./bitbang
 
 clean:
 	rm -f bitbang
