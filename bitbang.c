@@ -37,6 +37,14 @@ int main(int argc, char **argv)
 		goto exit1;
 	}
 
+	f = ftdi_get_latency_timer(ftdi, buf);
+	if (f < 0){
+		pr_err("ftdi_get_latency_timer(): %s\n",
+				ftdi_get_error_string(ftdi));
+		goto exit2;
+	}
+	pr_debug("Latency timer is %d ms\n",(int)buf[0]);
+
 	// 0x1 => AD0 OUTPUT (bit=1), all others are INPUT
 	f = ftdi_set_bitmode(ftdi, 0x1, BITMODE_BITBANG);
 	if (f < 0){

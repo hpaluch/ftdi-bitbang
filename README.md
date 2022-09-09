@@ -3,6 +3,11 @@
 It is trivial LED blinking example using FTDI chip in so called
 BitBang mode (basically GPIO).
 
+This example uses open-source libFTDI from:
+- https://www.intra2net.com/en/developer/libftdi/index.php
+Please note that its API is different from (mostly) closed source
+library provided by FTDI company.
+
 HW Requirements:
 - UM232H board with FTDI chip
 
@@ -50,5 +55,7 @@ of Power supply to avoid 3.3V vs. 5V logic issues.
 
 Source loosely based on official example:
 - https://github.com/legege/libftdi/blob/master/examples/bitbang.c
+- possible original(?)
+  - http://developer.intra2net.com/git/?p=libftdi;a=blob;f=examples/bitbang.c;h=0a677723a77cd8f7ac2b4f17d8afe0376ea04d86;hb=HEAD
 
 
