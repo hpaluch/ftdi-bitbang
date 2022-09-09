@@ -6,7 +6,6 @@
 
 #include <ftdi.h>
 
-
 // Vendor and Device IDs for UM232H board (verify with "lsusb") command
 #define BB_UM232H_VID 0x403
 #define BB_UM232H_DID 0x6014
@@ -38,7 +37,7 @@ int main(int argc, char **argv)
 		goto exit1;
 	}
 
-	// AD0 OUTPUT (bit=1), all others are Input
+	// 0x1 => AD0 OUTPUT (bit=1), all others are INPUT
 	f = ftdi_set_bitmode(ftdi, 0x1, BITMODE_BITBANG);
 	if (f < 0){
 		pr_err("ftdi_set_bitmode(BITBANG): %s\n",
@@ -48,7 +47,7 @@ int main(int argc, char **argv)
 
 	sleep(3); // ugh see base source
 
-	for(i=0;i<10;i++){
+	for(i=0;i<11;i++){
 		buf[0] = (unsigned char)(i & 1);
 		f = ftdi_write_data(ftdi, buf, 1);
 		if (f < 0){
@@ -59,7 +58,6 @@ int main(int argc, char **argv)
 		printf("#%02d Setting AD0 LED to %d\n",i+1,(int)buf[0]);
 		sleep(1);
 	}
-
 
 	ret = EXIT_SUCCESS;
 exit3:

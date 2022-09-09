@@ -11,7 +11,6 @@ Here is example output from `lsusb` command:
 Bus 001 Device 007: ID 0403:6014 Future Technology Devices International, Ltd FT232H Single HS USB-UART/FIFO IC
 ```
 
-
 Wiring:
 - connect VIO and 3V3
 - connect 5V0 and USB
@@ -38,8 +37,14 @@ DEBUG: FTDI library ver='1.5' snapshot='unknown'
 ...
 #09 Setting AD0 LED to 0
 #10 Setting AD0 LED to 1
+#11 Setting AD0 LED to 0
 Exiting with ret=0
 ```
+
+# Bugs
+
+When in IDLE mode LED is ON. However I prefer to bind it to GND instead
+of Power supply to avoid 3.3V vs. 5V logic issues.
 
 # Resources
 
