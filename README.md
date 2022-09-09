@@ -21,10 +21,29 @@ Software setup - tested on openSUSE LEAP 15.4:
 ```bash
 sudo zypper in libftdi1-devel make gcc
 ```
+# Building
+
+Just invoke `make`
+
+# Running
+
+Invoke `make run` - example output:
+```
+make run
+sudo ./bitbang
+[sudo] password for root: 
+DEBUG: FTDI library ver='1.5' snapshot='unknown'
+#01 Setting AD0 LED to 0
+#02 Setting AD0 LED to 1
+...
+#09 Setting AD0 LED to 0
+#10 Setting AD0 LED to 1
+Exiting with ret=0
+```
 
 # Resources
 
-Source losely based on official example:
+Source loosely based on official example:
 - https://github.com/legege/libftdi/blob/master/examples/bitbang.c
 
 
