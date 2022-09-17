@@ -16,7 +16,10 @@ Here is example output from `lsusb` command:
 Bus 001 Device 007: ID 0403:6014 Future Technology Devices International, Ltd FT232H Single HS USB-UART/FIFO IC
 ```
 
-Wiring:
+Wiring - see schematics below (KiCad sources are in [kicad/](kicad/) folder:
+
+![UM232H BitBang GPIO](https://github.com/hpaluch/ftdi-bitbang/blob/master/assets/ftdi-bitbang.png?raw=true) 
+
 - connect VIO and 3V3
 - connect 5V0 and USB
 - connect LED with resistor (around 470 Ohm) between pin AD0 and GND

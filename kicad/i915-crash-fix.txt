@@ -1,0 +1,11 @@
+If your KiCad crashes on Intel i915 card, you can
+try this tip from https://wiki.archlinux.org/title/intel_graphics
+
+To run schematic editor:
+
+MESA_LOADER_DRIVER_OVERRIDE=i965 eeschema
+
+Or run whole KiCad:
+
+MESA_LOADER_DRIVER_OVERRIDE=i965 kicad
+

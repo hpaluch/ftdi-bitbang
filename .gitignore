@@ -2,4 +2,9 @@
 *.tmp
 *.swp
 *.bak
+# backups from KiCad
+*-bak
+_autosave-*
+
+# binaries
 bitbang

@@ -1,0 +1,146 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L hp_lib:UM232H U1
+U 1 1 6325BF3D
+P 2600 2050
+F 0 "U1" H 2700 2115 50  0000 C CNN
+F 1 "UM232H" H 2700 2024 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm" H 2600 2050 50  0001 C CNN
+F 3 "" H 2600 2050 50  0001 C CNN
+	1    2600 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2400 3550 2400
+Wire Wire Line
+	3550 2400 3550 2500
+Wire Wire Line
+	3550 2500 3100 2500
+Wire Wire Line
+	2300 2500 2150 2500
+Wire Wire Line
+	2150 2500 2150 2400
+Wire Wire Line
+	2150 2400 2300 2400
+$Comp
+L power:GND #PWR?
+U 1 1 6325DB6C
+P 4200 2450
+F 0 "#PWR?" H 4200 2200 50  0001 C CNN
+F 1 "GND" H 4205 2277 50  0000 C CNN
+F 2 "" H 4200 2450 50  0001 C CNN
+F 3 "" H 4200 2450 50  0001 C CNN
+	1    4200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R
+U 1 1 6325E40A
+P 3550 2850
+F 0 "R" H 3620 2896 50  0000 L CNN
+F 1 "470R" H 3620 2805 50  0000 L CNN
+F 2 "" V 3480 2850 50  0001 C CNN
+F 3 "~" H 3550 2850 50  0001 C CNN
+	1    3550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6325E84D
+P 1750 3150
+F 0 "R2" H 1820 3196 50  0000 L CNN
+F 1 "470R" H 1820 3105 50  0000 L CNN
+F 2 "" V 1680 3150 50  0001 C CNN
+F 3 "~" H 1750 3150 50  0001 C CNN
+	1    1750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 6325EC4D
+P 3550 3300
+F 0 "D1" V 3589 3182 50  0000 R CNN
+F 1 "RED" V 3498 3182 50  0000 R CNN
+F 2 "" H 3550 3300 50  0001 C CNN
+F 3 "~" H 3550 3300 50  0001 C CNN
+	1    3550 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 6325F862
+P 1750 3600
+F 0 "D2" V 1789 3482 50  0000 R CNN
+F 1 "YELLOW" V 1698 3482 50  0000 R CNN
+F 2 "" H 1750 3600 50  0001 C CNN
+F 3 "~" H 1750 3600 50  0001 C CNN
+	1    1750 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3550 3000 3550 3150
+Wire Wire Line
+	1750 3300 1750 3450
+Wire Wire Line
+	3550 2700 3550 2500
+Connection ~ 3550 2500
+$Comp
+L power:GND #PWR?
+U 1 1 63265012
+P 3550 3650
+F 0 "#PWR?" H 3550 3400 50  0001 C CNN
+F 1 "GND" H 3555 3477 50  0000 C CNN
+F 2 "" H 3550 3650 50  0001 C CNN
+F 3 "" H 3550 3650 50  0001 C CNN
+	1    3550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3450 3550 3650
+Wire Wire Line
+	2300 2900 1750 2900
+Wire Wire Line
+	1750 2900 1750 3000
+$Comp
+L power:GND #PWR?
+U 1 1 632687D3
+P 1750 3950
+F 0 "#PWR?" H 1750 3700 50  0001 C CNN
+F 1 "GND" H 1755 3777 50  0000 C CNN
+F 2 "" H 1750 3950 50  0001 C CNN
+F 3 "" H 1750 3950 50  0001 C CNN
+	1    1750 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3750 1750 3950
+Text Notes 7000 6850 0    118  ~ 0
+UM232H GPIO bitbang example
+Text Notes 9700 7300 0    100  ~ 0
+(C) Henryk Paluch
+Text Notes 10700 7650 0    50   ~ 0
+0.9
+Text Notes 8150 7650 0    50   ~ 0
+2022-09-17
+Wire Wire Line
+	3000 2300 3100 2300
+Wire Wire Line
+	4200 2300 4200 2450
+Connection ~ 3100 2300
+Wire Wire Line
+	3100 2300 4200 2300
+$EndSCHEMATC

@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP UM232H
+D USB Hi-Speed FT232H Evaluation Module, USB High Speed to UART/FIFO/JTAG/SPI/I2C
+K ftdi usb mpsse uart jtag spi i2c gpio
+$ENDCMP
+#
+#End Doc Library
