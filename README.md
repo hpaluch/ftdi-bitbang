@@ -3,6 +3,8 @@
 It is trivial LED blinking example using FTDI chip in so called
 BitBang mode (basically GPIO).
 
+![UM232H BitBang GPIO - photo](https://github.com/hpaluch/ftdi-bitbang/blob/master/assets/um232-breadboard-800px.jpg?raw=true)
+
 This example uses open-source libFTDI from:
 - https://www.intra2net.com/en/developer/libftdi/index.php
 Please note that its API is different from (mostly) closed source
@@ -18,7 +20,7 @@ Bus 001 Device 007: ID 0403:6014 Future Technology Devices International, Ltd FT
 
 Wiring - see schematics below (KiCad sources are in [kicad/](kicad/) folder:
 
-![UM232H BitBang GPIO](https://github.com/hpaluch/ftdi-bitbang/blob/master/assets/ftdi-bitbang.png?raw=true) 
+![UM232H BitBang GPIO - schematic](https://github.com/hpaluch/ftdi-bitbang/blob/master/assets/ftdi-bitbang.png?raw=true)
 
 - connect VIO and 3V3
 - connect 5V0 and USB
